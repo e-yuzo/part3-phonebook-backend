@@ -39,6 +39,10 @@ app.get('/info', (req, res) => {
     res.send(count + date)
 })
 
+// app.get('/', (req, res) => {
+//     res.send()
+// })
+
 app.get('/api/persons', (req, res) => {
     res.json(persons)
 })
@@ -65,11 +69,11 @@ const generateId = () => {
 
 app.post('/api/persons', (req, res) => {
     const body = req.body
-    if (!body.content) {
-        return res.status(400).json({
-            error: 'content missing'
-        })
-    }
+    // if (!body.content) {
+    //     return res.status(400).json({
+    //         error: 'content missing'
+    //     })
+    // }
     if (!body.name || !body.number) {
         return res.status(400).json({
             error: 'name or number is missing'
